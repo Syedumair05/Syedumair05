@@ -1,0 +1,109 @@
+const fs = require('fs');
+const path = require('path');
+
+const pdfContent = `%PDF-1.4
+1 0 obj
+<<
+  /Type /Catalog
+  /Pages 2 0 R
+>>
+endobj
+
+2 0 obj
+<<
+  /Type /Pages
+  /Kids [3 0 R]
+  /Count 1
+>>
+endobj
+
+3 0 obj
+<<
+  /Type /Page
+  /Parent 2 0 R
+  /Resources <<
+    /Font <<
+      /F1 4 0 R
+    >>
+  >>
+  /MediaBox [0 0 612 792]
+  /Contents 5 0 R
+>>
+endobj
+
+4 0 obj
+<<
+  /Type /Font
+  /Subtype /Type1
+  /BaseFont /Helvetica
+>>
+endobj
+
+5 0 obj
+<<
+  /Length 550
+>>
+stream
+BT
+/F1 20 Tf
+50 740 Td
+(SYED UMAIR AHMED) Tj
+/F1 12 Tf
+0 -25 Td
+(Computer Science Engineering Student) Tj
+0 -20 Td
+(Email: syedumairahmed9999@gmail.com | Phone: +91 8688381782) Tj
+0 -15 Td
+(GitHub: github.com/Syedumair05 | LinkedIn: linkedin.com/in/syedumair05) Tj
+0 -30 Td
+(EDUCATION) Tj
+0 -15 Td
+(B.E. Computer Science Engineering - Lords Institute of Engg. & Tech (2024-2028)) Tj
+0 -15 Td
+(Intermediate MPC - Shaheen Junior College (2022-2024)) Tj
+0 -30 Td
+(SKILLS & TECHNOLOGIES) Tj
+0 -15 Td
+(Languages: Java, Python, C) Tj
+0 -15 Td
+(Web: HTML, CSS, JavaScript, React, Bootstrap 5) Tj
+0 -15 Td
+(Core: Data Structures, OOP, DBMS, OS, Networks, AI/ML) Tj
+0 -30 Td
+(PROJECTS) Tj
+0 -15 Td
+(- AI Resume Reviewer) Tj
+0 -15 Td
+(- AI Accident Detection Dashboard V2) Tj
+0 -15 Td
+(- AgriMitra - AI Crop Market Intelligence) Tj
+0 -15 Td
+(- Job Shield & Virtual Lab Experience) Tj
+ET
+endstream
+endobj
+
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000244 00000 n 
+0000000318 00000 n 
+trailer
+<<
+  /Size 6
+  /Root 1 0 R
+>>
+startxref
+920
+%%EOF`;
+
+const publicDir = path.join(__dirname, 'public');
+if (!fs.existsSync(publicDir)) {
+  fs.mkdirSync(publicDir, { recursive: true });
+}
+
+fs.writeFileSync(path.join(publicDir, 'Syed_Umair_Ahmed_Resume.pdf'), pdfContent);
+console.log('Resume PDF created successfully in public directory!');
