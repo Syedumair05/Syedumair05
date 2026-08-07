@@ -6,6 +6,35 @@ import projectLabImg from '../assets/images/project2.png';
 import projectResumeImg from '../assets/images/project_resumereview.png';
 import projectMeshImg from '../assets/images/project_meshweb.png';
 import projectShadowImg from '../assets/images/project_shadow.png';
+import flyRankImg from '../assets/images/flyrank_internship.png';
+import alfidoOfferImg from '../assets/images/alfido_offer_letter.png';
+
+export const internshipsData = [
+  {
+    id: 1,
+    role: "Backend AI Engineering Intern",
+    company: "FlyRank AI",
+    type: "Internship",
+    duration: "Jul 2026 – Present",
+    location: "Chicago, Illinois, United States · Remote",
+    description: "Currently interning at FlyRank AI as an AI intern, focusing on Backend AI Engineering, intelligent model APIs, and machine learning infrastructure.",
+    skills: ["Backend AI Engineering", "Python", "API Integration", "AI/ML Workflows"],
+    image: flyRankImg,
+    proofTitle: "LinkedIn Internship Verification"
+  },
+  {
+    id: 2,
+    role: "Frontend Developer Intern",
+    company: "Alfido Tech",
+    type: "Internship (6 Months)",
+    duration: "Aug 2026 – Present",
+    location: "Hyderabad, Telangana, India",
+    description: "Engaged in hands-on task-based learning model, building real-world web applications, component architecture, and responsive user interfaces.",
+    skills: ["Frontend Web Development", "React.js", "JavaScript", "HTML5 & CSS3"],
+    image: alfidoOfferImg,
+    proofTitle: "Official Internship Offer Letter (Candidate ID: BS/REG/125802)"
+  }
+];
 
 export const personalDetails = {
   name: "Syed Umair Ahmed",
