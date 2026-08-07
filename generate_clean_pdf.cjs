@@ -15,7 +15,6 @@ const primaryColor = '#0f2c59';
 const secondaryColor = '#1d4ed8';
 const darkTextColor = '#1e293b';
 const lightTextColor = '#475569';
-const bgColor = '#f8fafc';
 
 // Header Name
 doc.fillColor(primaryColor).fontSize(22).font('Helvetica-Bold').text('SYED UMAIR AHMED', 30, 30);
@@ -27,11 +26,11 @@ doc.fillColor(darkTextColor).fontSize(9.5).font('Helvetica')
 
 // Contact Info (Right Side)
 doc.fillColor(darkTextColor).fontSize(9).font('Helvetica');
-doc.text('+91 8688381782', 390, 32, { align: 'right' });
-doc.text('syedumairahmed9999@gmail.com', 390, 46, { align: 'right' });
-doc.fillColor(secondaryColor).text('github.com/Syedumair05', 390, 60, { align: 'right' });
-doc.text('linkedin.com/in/syedumair05', 390, 74, { align: 'right' });
-doc.fillColor(darkTextColor).text('Hyderabad, Telangana, India', 390, 88, { align: 'right' });
+doc.text('+91 8688381782', 350, 32, { align: 'right' });
+doc.text('syedumairahmed9999@gmail.com', 350, 46, { align: 'right', link: 'mailto:syedumairahmed9999@gmail.com' });
+doc.fillColor(secondaryColor).text('github.com/Syedumair05', 350, 60, { align: 'right', link: 'https://github.com/Syedumair05', underline: true });
+doc.text('linkedin.com/in/syedumair05', 350, 74, { align: 'right', link: 'https://www.linkedin.com/in/syedumair05/', underline: true });
+doc.fillColor(darkTextColor).text('Hyderabad, Telangana, India', 350, 88, { align: 'right' });
 
 // Horizontal Line
 doc.moveTo(30, 130).lineTo(565, 130).strokeColor('#cbd5e1').lineWidth(1).stroke();
@@ -158,25 +157,29 @@ drawSectionHeaderRight('PROJECTS');
 const projects = [
   {
     name: 'AI Accident Detection Dashboard',
-    link: 'github.com/Syedumair05/AI-Accident-Detection',
+    linkText: 'github.com/Syedumair05/AI-Accident-Detection',
+    url: 'https://github.com/Syedumair05/ai-accident-detection-dashboard-v2',
     desc: 'Developed an AI-powered dashboard to detect road accidents and provide real-time alerts using computer vision techniques.',
     bullets: ['Utilized AI models and video feeds to identify accidents and trigger alerts.', 'Built an interactive dashboard to visualize incident data.']
   },
   {
     name: 'AgriMitra - AI Crop Market Intelligence',
-    link: 'github.com/Syedumair05/AgriMitra-',
+    linkText: 'github.com/Syedumair05/AgriMitra-',
+    url: 'https://github.com/Syedumair05/AgriMitra-',
     desc: 'An intelligent agricultural market advisor helping farmers maximize crop profits through mandi price analysis and price predictions.',
     bullets: ['Real-time mandi prices, smart price prediction & profit calculator.', 'Multilingual & voice support with weather & maps integration.']
   },
   {
     name: 'Job Shield',
-    link: 'github.com/Syedumair05/Job-Shield',
+    linkText: 'github.com/Syedumair05/Job-Shield',
+    url: 'https://github.com/Syedumair05/Job-Shield',
     desc: 'Built a platform focused on job-related safety and security features, user authentication, and secure data handling.',
     bullets: ['Implemented user authentication and secure data handling.']
   },
   {
     name: 'Virtual Lab Experience',
-    link: 'github.com/Syedumair05/virtual-lab-experience',
+    linkText: 'github.com/Syedumair05/virtual-lab-experience',
+    url: 'https://github.com/Syedumair05/virtual-lab-experience',
     desc: 'Created a virtual lab platform to simulate practical science experiments for students in a digital environment.',
     bullets: ['Simulated experiments with real-time interaction.']
   }
@@ -184,7 +187,7 @@ const projects = [
 
 projects.forEach((p) => {
   doc.fillColor(primaryColor).fontSize(9.5).font('Helvetica-Bold').text(p.name, rightX, rightY);
-  doc.fillColor(secondaryColor).fontSize(8).font('Helvetica').text(p.link, 380, rightY, { align: 'right' });
+  doc.fillColor(secondaryColor).fontSize(8).font('Helvetica').text(p.linkText, 350, rightY, { align: 'right', link: p.url, underline: true });
   rightY += 12;
   doc.fillColor(darkTextColor).fontSize(8.5).font('Helvetica').text(p.desc, rightX, rightY, { width: rightWidth });
   rightY += (doc.heightOfString(p.desc, { width: rightWidth }) + 3);
@@ -209,4 +212,4 @@ doc.rect(30, 792 - 35, 535, 20).fill(primaryColor);
 doc.fillColor('#ffffff').fontSize(8.5).font('Helvetica-Bold').text('"Eager to learn, build and contribute to impactful projects."', 30, 792 - 29, { width: 535, align: 'center' });
 
 doc.end();
-console.log('PDF resume successfully generated in public directory!');
+console.log('PDF resume with working web links successfully generated!');
