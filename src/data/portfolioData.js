@@ -32,7 +32,7 @@ export const internshipsData = [
     description: "Engaged in hands-on task-based learning model, building real-world web applications, component architecture, and responsive user interfaces.",
     skills: ["Frontend Web Development", "React.js", "JavaScript", "HTML5 & CSS3"],
     image: alfidoOfferImg,
-    proofTitle: "Official Internship Offer Letter (Candidate ID: BS/REG/125802)"
+    proofTitle: "Candidate ID: BS/REG/125802"
   }
 ];
 
