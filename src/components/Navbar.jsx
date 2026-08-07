@@ -141,11 +141,15 @@ const Navbar = () => {
         {/* Mobile Menu Drawer */}
         {isOpen && (
           <div
-            className="d-lg-none position-fixed top-0 start-0 w-100 h-100 mobile-nav-drawer"
+            className="d-lg-none position-fixed top-0 start-0 w-100 vh-100 overflow-y-auto"
             style={{
+              backgroundColor: 'var(--bg-primary)',
+              zIndex: 10005,
               paddingTop: '90px',
               paddingLeft: '24px',
-              paddingRight: '24px'
+              paddingRight: '24px',
+              paddingBottom: '40px',
+              opacity: 1
             }}
           >
             <ul className="navbar-nav gap-3 text-center">
