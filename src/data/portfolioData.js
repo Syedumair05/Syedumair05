@@ -247,6 +247,18 @@ export const certificationsData = [
     title: "Machine Learning for Beginners",
     issuer: "Simplilearn",
     skills: ["Machine Learning", "Supervised Learning", "Data Analysis"]
+  },
+  {
+    id: 9,
+    title: "QuizOff 2026: India's Biggest AI Quiz",
+    issuer: "CampusCrew",
+    skills: ["Artificial Intelligence (AI)", "Problem Solving"]
+  },
+  {
+    id: 10,
+    title: "AI Tool Workshop",
+    issuer: "Be10x",
+    skills: ["AI Tools", "Generative AI", "Productivity"]
   }
 ];
 
@@ -260,7 +272,7 @@ export const courseworkData = [
 ];
 
 export const achievementsData = [
-  "Completed 8+ industry-recognized certifications in programming, AI, cloud, and databases.",
+  "Completed 10+ industry-recognized certifications in programming, AI, cloud, and databases.",
   "Actively participated in coding challenges and technical events.",
   "Built and deployed multiple real-world projects using modern web technologies.",
   "Consistent academic performance with strong problem-solving skills."
