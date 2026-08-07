@@ -297,6 +297,21 @@ section {
 }
 
 /* Preloader */
+.mobile-nav-drawer {
+  background-color: var(--bg-primary) !important;
+  opacity: 1 !important;
+  z-index: 99999 !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+}
+
+[data-theme="light"] .mobile-nav-drawer {
+  background-color: #ffffff !important;
+}
+
+[data-theme="dark"] .mobile-nav-drawer {
+  background-color: #0a0d14 !important;
+}
+
 .preloader {
   position: fixed;
   top: 0;

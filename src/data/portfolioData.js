@@ -55,7 +55,7 @@ export const personalDetails = {
   phone: "+91 8688381782",
   github: "https://github.com/Syedumair05",
   linkedin: "https://www.linkedin.com/in/syedumair05/",
-  resumeUrl: "/resume.html"
+  resumeUrl: "/Syed_Umair_Ahmed_Resume.pdf"
 };
 
 export const skillsData = {

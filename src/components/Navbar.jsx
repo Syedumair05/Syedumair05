@@ -129,6 +129,7 @@ const Navbar = () => {
 
           <a
             href={personalDetails.resumeUrl}
+            download="Syed_Umair_Ahmed_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-primary-custom text-decoration-none"
@@ -140,13 +141,11 @@ const Navbar = () => {
         {/* Mobile Menu Drawer */}
         {isOpen && (
           <div
-            className="d-lg-none position-fixed top-0 start-0 w-100 h-100"
+            className="d-lg-none position-fixed top-0 start-0 w-100 h-100 mobile-nav-drawer"
             style={{
-              backgroundColor: 'var(--bg-primary)',
-              zIndex: 999,
-              paddingTop: '80px',
-              paddingLeft: '20px',
-              paddingRight: '20px'
+              paddingTop: '90px',
+              paddingLeft: '24px',
+              paddingRight: '24px'
             }}
           >
             <ul className="navbar-nav gap-3 text-center">
@@ -164,7 +163,10 @@ const Navbar = () => {
               ))}
               <li className="nav-item mt-4">
                 <a
-                  href="#contact"
+                  href={personalDetails.resumeUrl}
+                  download="Syed_Umair_Ahmed_Resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="btn-primary-custom w-100 justify-content-center py-3 fs-5"
                   onClick={() => setIsOpen(false)}
                 >
