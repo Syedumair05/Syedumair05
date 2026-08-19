@@ -87,8 +87,14 @@ const Hero = () => {
 
               {/* Action Buttons */}
               <div className="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start mb-5">
-                <a href="#contact" className="btn-primary-custom">
-                  <FaPaperPlane /> Contact Me
+                <a
+                  href={personalDetails.resumeUrl}
+                  download="Syed_Umair_Ahmed_Resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary-custom text-decoration-none"
+                >
+                  <FaDownload /> Download Resume
                 </a>
                 <a href="#projects" className="btn-outline-custom">
                   <FaFolderOpen /> View Projects
@@ -96,7 +102,7 @@ const Hero = () => {
               </div>
 
               {/* Social Media Links */}
-              <div className="d-flex align-items-center gap-3 justify-content-center justify-content-lg-start">
+              <div className="d-flex align-items-center gap-3 justify-content-center justify-content-lg-start flex-wrap">
                 <span className="text-muted fw-medium small">Connect with me:</span>
                 <a
                   href={personalDetails.github}
@@ -125,6 +131,15 @@ const Hero = () => {
                   aria-label="Email Me"
                 >
                   <FaEnvelope />
+                </a>
+                <a
+                  href="#contact"
+                  className="glass-card px-3 py-2 rounded-pill text-decoration-none d-flex align-items-center gap-2 small fw-semibold ms-lg-2"
+                  style={{ color: 'var(--text-secondary)' }}
+                  aria-label="Contact Me"
+                >
+                  <FaPaperPlane style={{ color: 'var(--accent-cyan)', fontSize: '0.85rem' }} />
+                  <span>Contact Me</span>
                 </a>
               </div>
             </motion.div>

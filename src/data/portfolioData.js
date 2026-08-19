@@ -90,7 +90,7 @@ export const projectsData = [
     category: "AI / Web App",
     description: "An AI-powered resume analysis system that evaluates resumes against job descriptions, calculates ATS compatibility scores, extracts key skills, and generates personalized recommendations.",
     image: projectResumeImg,
-    techStack: ["TypeScript", "React", "Gemini AI", "TailwindCSS"],
+    techStack: ["TypeScript", "React", "Gemini AI", "TailwindCSS", "Git & GitHub"],
     githubUrl: "https://github.com/Syedumair05/Resume-Review",
     liveUrl: "https://github.com/Syedumair05/Resume-Review",
     bullets: [
@@ -105,7 +105,7 @@ export const projectsData = [
     category: "AI / Computer Vision",
     description: "Developed an AI-powered dashboard V2 to detect road accidents and provide real-time alerts using computer vision models and interactive live incident visualization feeds.",
     image: projectAccidentImg,
-    techStack: ["Python", "AI/ML", "Computer Vision", "JavaScript"],
+    techStack: ["Python", "AI/ML", "Computer Vision", "JavaScript", "Git"],
     githubUrl: "https://github.com/Syedumair05/ai-accident-detection-dashboard-v2",
     liveUrl: "https://github.com/Syedumair05/ai-accident-detection-dashboard-v2",
     bullets: [
@@ -120,7 +120,7 @@ export const projectsData = [
     category: "AI / Agriculture",
     description: "An intelligent, multilingual agricultural market advisor that helps Indian farmers maximize crop profits through real-time mandi price analysis, smart price predictions, and personalized selling recommendations.",
     image: projectAgriImg,
-    techStack: ["JavaScript", "HTML", "CSS", "Chart.js", "Google Maps API", "Weatherstack API"],
+    techStack: ["JavaScript", "HTML5", "CSS3", "Chart.js", "Google Maps API", "Weatherstack API"],
     githubUrl: "https://github.com/Syedumair05/AgriMitra-",
     liveUrl: "https://github.com/Syedumair05/AgriMitra-",
     bullets: [
@@ -137,7 +137,7 @@ export const projectsData = [
     category: "Web Security",
     description: "Built a platform focused on job-related safety and security features, helping users manage job-related risks and information efficiently with secure data handling and user authentication.",
     image: projectJobImg,
-    techStack: ["JavaScript", "HTML", "CSS", "GitHub"],
+    techStack: ["JavaScript", "HTML", "CSS", "Database Fundamentals", "Git & GitHub"],
     githubUrl: "https://github.com/Syedumair05/Job-Shield",
     liveUrl: "https://github.com/Syedumair05/Job-Shield",
     bullets: [
@@ -152,7 +152,7 @@ export const projectsData = [
     category: "Web Simulation",
     description: "Created a virtual lab platform to simulate practical experiments and provide interactive learning for science students in a digital environment with real-time interaction.",
     image: projectLabImg,
-    techStack: ["TypeScript", "React", "HTML5", "CSS3"],
+    techStack: ["TypeScript", "React", "HTML5", "CSS3", "OOP"],
     githubUrl: "https://github.com/Syedumair05/virtual-lab-experience",
     liveUrl: "https://github.com/Syedumair05/virtual-lab-experience",
     bullets: [
@@ -167,7 +167,7 @@ export const projectsData = [
     category: "Web Network / UI",
     description: "Interactive mesh web networking platform showcasing dynamic interconnected node graphs, real-time visual data processing, and custom canvas rendering.",
     image: projectMeshImg,
-    techStack: ["JavaScript", "HTML5", "CSS3", "Canvas"],
+    techStack: ["JavaScript", "HTML5", "CSS3", "Canvas", "Data Structures & Algorithms"],
     githubUrl: "https://github.com/Syedumair05/MeshWeb",
     liveUrl: "https://github.com/Syedumair05/MeshWeb",
     bullets: [

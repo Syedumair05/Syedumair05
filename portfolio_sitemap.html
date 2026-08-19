@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Portfolio Sitemap - Draw the Path: Portfolio Sitemap + Toolkit</title>
+  <meta name="description" content="Academic sitemap diagram and toolkit documentation for personal portfolio website structure. Submitted for 'Draw the Path: Portfolio Sitemap + Toolkit' assignment.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-page: #f1f5f9;
+      --bg-card: #ffffff;
+      --border-color: #e2e8f0;
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+      --accent-blue: #2563eb;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: var(--bg-page);
+      color: var(--text-main);
+      padding: 24px 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Top Control & Navigation Bar (Hidden during printing) */
+    .toolbar {
+      width: 100%;
+      max-width: 1400px;
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-radius: 12px;
+      padding: 14px 24px;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05);
+    }
+
+    .toolbar-title {
+      font-weight: 700;
+      font-size: 14px;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .badge-assignment {
+      background: #eff6ff;
+      color: #1e40af;
+      border: 1px solid #bfdbfe;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .actions {
+      display: flex;
+      gap: 12px;
+    }
+
+    .btn {
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 8px 16px;
+      border-radius: 6px;
+      border: 1px solid #cbd5e1;
+      background: #ffffff;
+      color: var(--text-main);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.15s ease;
+    }
+
+    .btn:hover {
+      background: #f8fafc;
+      border-color: #94a3b8;
+    }
+
+    .btn-primary {
+      background: var(--accent-blue);
+      color: #ffffff;
+      border-color: var(--accent-blue);
+    }
+
+    .btn-primary:hover {
+      background: #1d4ed8;
+      border-color: #1d4ed8;
+    }
+
+    /* Main Sitemap Visual Container */
+    .sitemap-container {
+      width: 100%;
+      max-width: 1400px;
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(15, 23, 42, 0.08);
+      position: relative;
+    }
+
+    .sitemap-svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Print & Screenshot Optimization */
+    @media print {
+      body {
+        background: #ffffff;
+        padding: 0;
+      }
+
+      .toolbar {
+        display: none !important;
+      }
+
+      .sitemap-container {
+        border: none;
+        box-shadow: none;
+        max-width: 100%;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Action & Navigation Bar -->
+  <div class="toolbar">
+    <div class="toolbar-title">
+      <span class="badge-assignment">COLLEGE ASSIGNMENT</span>
+      <span>Draw the Path: Portfolio Sitemap + Toolkit</span>
+    </div>
+    <div class="actions">
+      <button class="btn" onclick="window.print()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+        Print / Save PDF
+      </button>
+      <a class="btn btn-primary" href="portfolio_sitemap.svg" download="portfolio_sitemap.svg">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+        Download SVG Vector
+      </a>
+    </div>
+  </div>
+
+  <!-- Sitemap SVG Canvas Container -->
+  <main class="sitemap-container" id="sitemap-frame">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 940" class="sitemap-svg" style="background-color: #f8fafc; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+      <defs>
+        <!-- Grid pattern for subtle academic architectural backing -->
+        <pattern id="dot-grid" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+          <circle cx="12" cy="12" r="1" fill="#cbd5e1" />
+        </pattern>
+
+        <!-- Drop Shadows -->
+        <filter id="shadow-sm" x="-10%" y="-10%" width="120%" height="120%">
+          <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0f172a" flood-opacity="0.06" />
+        </filter>
+
+        <filter id="shadow-md" x="-15%" y="-15%" width="130%" height="130%">
+          <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#1e40af" flood-opacity="0.10" />
+        </filter>
+
+        <!-- Arrow Markers -->
+        <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+          <path d="M 0 1 L 8 5 L 0 9 z" fill="#64748b" />
+        </marker>
+
+        <marker id="arrow-blue" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+          <path d="M 0 1 L 8 5 L 0 9 z" fill="#2563eb" />
+        </marker>
+
+        <marker id="arrow-green" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+          <path d="M 0 1 L 8 5 L 0 9 z" fill="#16a34a" />
+        </marker>
+      </defs>
+
+      <!-- Background Layer -->
+      <rect width="1400" height="940" fill="#f8fafc" />
+      <rect width="1400" height="940" fill="url(#dot-grid)" opacity="0.7" />
+
+      <!-- Outer Frame / Margin Container -->
+      <rect x="24" y="24" width="1352" height="892" rx="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#shadow-sm)" />
+
+      <!-- ========================================== -->
+      <!-- 1. ACADEMIC HEADER BLOCK                   -->
+      <!-- ========================================== -->
+      <g transform="translate(60, 50)">
+        <!-- Course Tag Badge -->
+        <rect x="0" y="0" width="310" height="24" rx="12" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1" />
+        <text x="12" y="16" font-size="11" font-weight="700" fill="#1e40af" letter-spacing="0.8">ASSIGNMENT: DRAW THE PATH</text>
+        <text x="180" y="16" font-size="11" font-weight="500" fill="#3b82f6">• Portfolio Sitemap &amp; Toolkit</text>
+
+        <!-- Main Title -->
+        <text x="0" y="56" font-size="28" font-weight="800" fill="#0f172a" letter-spacing="-0.5">Personal Portfolio Sitemap</text>
+
+        <!-- Subtitle -->
+        <text x="0" y="78" font-size="14" font-weight="500" fill="#64748b">Existing Portfolio Structure &amp; User Navigation Architecture</text>
+      </g>
+
+      <!-- Right Header Metadata Badge -->
+      <g transform="translate(1080, 56)">
+        <rect x="0" y="0" width="240" height="48" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1" />
+        <text x="16" y="20" font-size="11" font-weight="700" fill="#475569">DOCUMENT TYPE:</text>
+        <text x="120" y="20" font-size="11" font-weight="600" fill="#0f172a">Academic Sitemap</text>
+        <text x="16" y="36" font-size="11" font-weight="700" fill="#475569">TOTAL SECTIONS:</text>
+        <text x="120" y="36" font-size="11" font-weight="700" fill="#2563eb">9 Existing Pages</text>
+      </g>
+
+      <line x1="60" y1="148" x2="1340" y2="148" stroke="#e2e8f0" stroke-width="1.5" />
+
+      <!-- ========================================== -->
+      <!-- 2. SITEMAP HIERARCHY TREE                   -->
+      <!-- ========================================== -->
+
+      <!-- Root Level: MY PORTFOLIO -->
+      <g transform="translate(700, 172)">
+        <rect x="-110" y="0" width="220" height="44" rx="8" fill="#1e293b" stroke="#0f172a" stroke-width="1.5" filter="url(#shadow-sm)" />
+        <text x="0" y="27" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="1">MY PORTFOLIO</text>
+      </g>
+
+      <!-- Trunk Line 1: Root to Home -->
+      <line x1="700" y1="216" x2="700" y2="248" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)" />
+
+      <!-- Primary Level: HOME (Index Landing Page) -->
+      <g transform="translate(700, 250)">
+        <rect x="-130" y="0" width="260" height="58" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2" filter="url(#shadow-md)" />
+        <path d="M -129 10 Q -129 1 -120 1 L 120 1 Q 129 1 129 10 L 129 14 L -129 14 Z" fill="#eff6ff" />
+        <text x="0" y="32" font-size="16" font-weight="800" fill="#1e3a8a" text-anchor="middle" letter-spacing="0.5">1. HOME</text>
+        <text x="0" y="48" font-size="11" font-weight="600" fill="#2563eb" text-anchor="middle">Main Landing Page &amp; Central Hub</text>
+      </g>
+
+      <!-- Trunk Line 2: Home to Horizontal Distribution Bus -->
+      <line x1="700" y1="308" x2="700" y2="345" stroke="#64748b" stroke-width="2" />
+      <circle cx="700" cy="345" r="4" fill="#2563eb" />
+
+      <!-- Horizontal Navigation Bus Line -->
+      <line x1="110" y1="345" x2="1290" y2="345" stroke="#64748b" stroke-width="2" />
+
+      <!-- Drop Lines from Bus Line to 8 Navigation Section Cards -->
+      <line x1="110" y1="345" x2="110" y2="375" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)" />
+      <line x1="278" y1="345" x2="278" y2="375" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)" />
+      <line x1="446" y1="345" x2="446" y2="375" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)" />
+      <line x1="614" y1="345" x2="614" y2="375" stroke="#0284c7" stroke-width="2" marker-end="url(#arrow-blue)" />
+      <line x1="782" y1="345" x2="782" y2="375" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)" />
+      <line x1="950" y1="345" x2="950" y2="375" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)" />
+      <line x1="1118" y1="345" x2="1118" y2="375" stroke="#16a34a" stroke-width="2" marker-end="url(#arrow-green)" />
+      <line x1="1286" y1="345" x2="1286" y2="375" stroke="#ca8a04" stroke-width="2" marker-end="url(#arrow)" />
+
+      <!-- ========================================== -->
+      <!-- 8 NAVIGATION SECTION CARDS                 -->
+      <!-- ========================================== -->
+
+      <!-- CARD 2: ABOUT -->
+      <g transform="translate(42, 376)">
+        <rect x="0" y="0" width="136" height="96" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" filter="url(#shadow-sm)" />
+        <path d="M 0 8 Q 0 0 8 0 L 128 0 Q 136 0 136 8 L 136 22 L 0 22 Z" fill="#f1f5f9" />
+        <text x="10" y="15" font-size="10" font-weight="700" fill="#475569">PAGE 02</text>
+        <text x="68" y="44" font-size="13" font-weight="700" fill="#0f172a" text-anchor="middle">About</text>
+        <line x1="16" y1="53" x2="120" y2="53" stroke="#e2e8f0" stroke-width="1" />
+        <text x="68" y="70" font-size="10.5" font-weight="500" fill="#64748b" text-anchor="middle">Personal Profile</text>
+        <text x="68" y="83" font-size="10.5" font-weight="500" fill="#64748b" text-anchor="middle">&amp; Background</text>
+      </g>
+
+      <!-- CARD 3: EXPERIENCE -->
+      <g transform="translate(210, 376)">
+        <rect x="0" y="0" width="136" height="96" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" filter="url(#shadow-sm)" />
+        <path d="M 0 8 Q 0 0 8 0 L 128 0 Q 136 0 136 8 L 136 22 L 0 22 Z" fill="#f1f5f9" />
+        <text x="10" y="15" font-size="10" font-weight="700" fill="#475569">PAGE 03</text>
+        <text x="68" y="44" font-size="13" font-weight="700" fill="#0f172a" text-anchor="middle">Experience</text>
+        <line x1="16" y1="53" x2="120" y2="53" stroke="#e2e8f0" stroke-width="1" />
+        <text x="68" y="70" font-size="10.5" font-weight="500" fill="#64748b" text-anchor="middle">Work History &amp;</text>
+        <text x="68" y="83" font-size="10.5" font-weight="500" fill="#64748b" text-anchor="middle">Career Roles</text>
+      </g>
+
+      <!-- CARD 4: SKILLS -->
+      <g transform="translate(378, 376)">
+        <rect x="0" y="0" width="136" height="96" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" filter="url(#shadow-sm)" />
+        <path d="M 0 8 Q 0 0 8 0 L 128 0 Q 136 0 136 8 L 136 22 L 0 22 Z" fill="#f1f5f9" />
+        <text x="10" y="15" font-size="10" font-weight="700" fill="#475569">PAGE 04</text>
+        <text x="68" y="44" font-size="13" font-weight="700" fill="#0f172a" text-anchor="middle">Skills</text>
+        <line x1="16" y1="53" x2="120" y2="53" stroke="#e2e8f0" stroke-width="1" />
+        <text x="68" y="70" font-size="10.5" font-weight="500" fill="#64748b" text-anchor="middle">Technical Stack,</text>
+        <text x="68" y="83" font-size="10.5" font-weight="500" fill="#64748b" text-anchor="middle">AI/ML &amp; Tools</text>
+      </g>
+
+      <!-- CARD 5: PROJECTS (Highlighted Core Evidence) -->
+      <g transform="translate(546, 376)">
+        <rect x="0" y="0" width="136" height="96" rx="8" fill="#f0f9ff" stroke="#0284c7" stroke-width="2" filter="url(#shadow-sm)" />
+        <path d="M 0 8 Q 0 0 8 0 L 128 0 Q 136 0 136 8 L 136 22 L 0 22 Z" fill="#bae6fd" />
+        <text x="10" y="15" font-size="10" font-weight="700" fill="#0369a1">PAGE 05</text>
+        <text x="68" y="44" font-size="13" font-weight="800" fill="#0369a1" text-anchor="middle">Projects</text>
+        <line x1="16" y1="53" x2="120" y2="53" stroke="#7dd3fc" stroke-width="1" />
+        <text x="68" y="70" font-size="10.5" font-weight="600" fill="#0284c7" text-anchor="middle">Practical AI, ML &amp;</text>
+        <text x="68" y="83" font-size="10.5" font-weight="600" fill="#0284c7" text-anchor="middle">Software Work</text>
+      </g>
+
+      <!-- CARD 6: EDUCATION -->
+      <g transform="translate(714, 376)">
+        <rect x="0" y="0" width="136" height="96" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" filter="url(#shadow-sm)" />
+        <path d="M 0 8 Q 0 0 8 0 L 128 0 Q 136 0 136 8 L 136 22 L 0 22 Z" fill="#f1f5f9" />
+        <text x="10" y="15" font-size="10" font-weight="700" fill="#475569">PAGE 06</text>
+        <text x="68" y="44" font-size="13" font-weight="700" fill="#0f172a" text-anchor="middle">Education</text>
+        <line x1="16" y1="53" x2="120" y2="53" stroke="#e2e8f0" stroke-width="1" />
+        <text x="68" y="70" font-size="10.5" font-weight="500" fill="#64748b" text-anchor="middle">CS Engineering</text>
+        <text x="68" y="83" font-size="10.5" font-weight="500" fill="#64748b" text-anchor="middle">Degree Coursework</text>
+      </g>
+
+      <!-- CARD 7: CERTIFICATIONS -->
+      <g transform="translate(882, 376)">
+        <rect x="0" y="0" width="136" height="96" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" filter="url(#shadow-sm)" />
+        <path d="M 0 8 Q 0 0 8 0 L 128 0 Q 136 0 136 8 L 136 22 L 0 22 Z" fill="#f1f5f9" />
+        <text x="10" y="15" font-size="10" font-weight="700" fill="#475569">PAGE 07</text>
+        <text x="68" y="44" font-size="13" font-weight="700" fill="#0f172a" text-anchor="middle">Certifications</text>
+        <line x1="16" y1="53" x2="120" y2="53" stroke="#e2e8f0" stroke-width="1" />
+        <text x="68" y="70" font-size="10.5" font-weight="500" fill="#64748b" text-anchor="middle">Verified Credentials</text>
+        <text x="68" y="83" font-size="10.5" font-weight="500" fill="#64748b" text-anchor="middle">&amp; Achievement Badges</text>
+      </g>
+
+      <!-- CARD 8: CONTACT (Primary Goal Conversion) -->
+      <g transform="translate(1050, 376)">
+        <rect x="0" y="0" width="136" height="96" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="2" filter="url(#shadow-sm)" />
+        <path d="M 0 8 Q 0 0 8 0 L 128 0 Q 136 0 136 8 L 136 22 L 0 22 Z" fill="#dcfce7" />
+        <text x="10" y="15" font-size="10" font-weight="700" fill="#15803d">PAGE 08</text>
+        <text x="68" y="44" font-size="13" font-weight="800" fill="#14532d" text-anchor="middle">Contact</text>
+        <line x1="16" y1="53" x2="120" y2="53" stroke="#86efac" stroke-width="1" />
+        <text x="68" y="70" font-size="10.5" font-weight="700" fill="#16a34a" text-anchor="middle">Primary Action</text>
+        <text x="68" y="83" font-size="10.5" font-weight="500" fill="#15803d" text-anchor="middle">Internship Inquiry</text>
+      </g>
+
+      <!-- CARD 9: RESUME -->
+      <g transform="translate(1218, 376)">
+        <rect x="0" y="0" width="136" height="96" rx="8" fill="#fefce8" stroke="#ca8a04" stroke-width="1.5" filter="url(#shadow-sm)" />
+        <path d="M 0 8 Q 0 0 8 0 L 128 0 Q 136 0 136 8 L 136 22 L 0 22 Z" fill="#fef08a" />
+        <text x="10" y="15" font-size="10" font-weight="700" fill="#a16207">PAGE 09</text>
+        <text x="68" y="44" font-size="13" font-weight="700" fill="#713f12" text-anchor="middle">Resume</text>
+        <line x1="16" y1="53" x2="120" y2="53" stroke="#fde047" stroke-width="1" />
+        <text x="68" y="70" font-size="10.5" font-weight="500" fill="#854d0e" text-anchor="middle">Downloadable CV</text>
+        <text x="68" y="83" font-size="10.5" font-weight="500" fill="#854d0e" text-anchor="middle">&amp; Credentials PDF</text>
+      </g>
+
+
+      <!-- ========================================== -->
+      <!-- 3. PORTFOLIO PURPOSE & VISITOR FLOW PANEL  -->
+      <!-- ========================================== -->
+      <g transform="translate(60, 525)">
+        <rect x="0" y="0" width="1280" height="305" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" filter="url(#shadow-sm)" />
+
+        <path d="M 0 12 Q 0 0 12 0 L 1268 0 Q 1280 0 1280 12 L 1280 34 L 0 34 Z" fill="#f8fafc" />
+        <line x1="0" y1="34" x2="1280" y2="34" stroke="#e2e8f0" stroke-width="1" />
+        <text x="20" y="22" font-size="11" font-weight="700" fill="#475569" letter-spacing="1">PORTFOLIO PURPOSE &amp; VISITOR JOURNEY MAPPING</text>
+        <text x="1260" y="22" font-size="11" font-weight="500" fill="#94a3b8" text-anchor="end">Strategic Alignment</text>
+
+        <!-- STEP 1: MAIN CLAIM -->
+        <g transform="translate(40, 60)">
+          <rect x="0" y="0" width="340" height="200" rx="10" fill="#f8fafc" stroke="#bfdbfe" stroke-width="1.5" />
+          <rect x="16" y="16" width="130" height="22" rx="4" fill="#eff6ff" />
+          <text x="24" y="31" font-size="10" font-weight="700" fill="#1d4ed8" letter-spacing="0.5">1. MAIN CLAIM</text>
+          
+          <text x="16" y="68" font-size="13" font-weight="700" fill="#0f172a">Identity Statement</text>
+          
+          <rect x="16" y="82" width="308" height="100" rx="6" fill="#ffffff" stroke="#dbeafe" stroke-width="1" />
+          <line x1="16" y1="82" x2="16" y2="182" stroke="#2563eb" stroke-width="4" />
+          <text x="28" y="112" font-size="12" font-weight="600" fill="#1e293b">“I am a Computer Science</text>
+          <text x="28" y="132" font-size="12" font-weight="600" fill="#1e293b">Engineering student who builds</text>
+          <text x="28" y="152" font-size="12" font-weight="600" fill="#1e293b">practical AI, ML, and full-stack</text>
+          <text x="28" y="172" font-size="12" font-weight="600" fill="#1e293b">software projects.”</text>
+        </g>
+
+        <!-- FLOW ARROW 1 -->
+        <g transform="translate(395, 160)">
+          <line x1="0" y1="0" x2="60" y2="0" stroke="#2563eb" stroke-width="2" marker-end="url(#arrow-blue)" />
+          <rect x="8" y="-22" width="44" height="16" rx="4" fill="#eff6ff" />
+          <text x="30" y="-10" font-size="9.5" font-weight="700" fill="#2563eb" text-anchor="middle">PROVES</text>
+        </g>
+
+        <!-- STEP 2: DEMONSTRATE SKILLS -->
+        <g transform="translate(470, 60)">
+          <rect x="0" y="0" width="340" height="200" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" />
+          <rect x="16" y="16" width="170" height="22" rx="4" fill="#f1f5f9" />
+          <text x="24" y="31" font-size="10" font-weight="700" fill="#475569" letter-spacing="0.5">2. EVIDENCE &amp; PROOF</text>
+          
+          <text x="16" y="68" font-size="13" font-weight="700" fill="#0f172a">Technical Demonstration</text>
+          
+          <rect x="16" y="82" width="308" height="100" rx="6" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+          <text x="28" y="112" font-size="12" font-weight="600" fill="#334155">Demonstrate technical skills</text>
+          <text x="28" y="132" font-size="12" font-weight="600" fill="#334155">through practical projects,</text>
+          <text x="28" y="152" font-size="12" font-weight="600" fill="#334155">work experience, and core</text>
+          <text x="28" y="172" font-size="12" font-weight="600" fill="#334155">CS engineering achievements.</text>
+        </g>
+
+        <!-- FLOW ARROW 2 -->
+        <g transform="translate(825, 160)">
+          <line x1="0" y1="0" x2="60" y2="0" stroke="#16a34a" stroke-width="2" marker-end="url(#arrow-green)" />
+          <rect x="6" y="-22" width="48" height="16" rx="4" fill="#dcfce7" />
+          <text x="30" y="-10" font-size="9.5" font-weight="700" fill="#15803d" text-anchor="middle">DRIVES</text>
+        </g>
+
+        <!-- STEP 3: PRIMARY ACTION -->
+        <g transform="translate(900, 60)">
+          <rect x="0" y="0" width="340" height="200" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2" />
+          <rect x="16" y="16" width="160" height="22" rx="4" fill="#dcfce7" />
+          <text x="24" y="31" font-size="10" font-weight="700" fill="#15803d" letter-spacing="0.5">3. PRIMARY ACTION</text>
+          
+          <text x="16" y="68" font-size="13" font-weight="800" fill="#14532d">Target Conversion Goal</text>
+          
+          <rect x="16" y="82" width="308" height="100" rx="6" fill="#ffffff" stroke="#86efac" stroke-width="1.5" />
+          <line x1="16" y1="82" x2="16" y2="182" stroke="#16a34a" stroke-width="4" />
+          <text x="28" y="118" font-size="13" font-weight="800" fill="#14532d">“Contact me for internship</text>
+          <text x="28" y="140" font-size="13" font-weight="800" fill="#14532d">opportunities.”</text>
+          <text x="28" y="166" font-size="10.5" font-weight="600" fill="#16a34a">Via Contact Form &amp; Direct Email</text>
+        </g>
+      </g>
+
+      <!-- ========================================== -->
+      <!-- 4. ACADEMIC FOOTER BAR                     -->
+      <!-- ========================================== -->
+      <g transform="translate(60, 890)">
+        <line x1="0" y1="0" x2="1280" y2="0" stroke="#e2e8f0" stroke-width="1" />
+        <text x="0" y="20" font-size="11" font-weight="500" fill="#64748b">Submitted for Academic Assignment: <tspan font-weight="700" fill="#0f172a">“Draw the Path: Portfolio Sitemap + Toolkit”</tspan></text>
+        <text x="1280" y="20" font-size="11" font-weight="500" fill="#64748b" text-anchor="end">Clean Light Academic Theme • Single Page Layout</text>
+      </g>
+    </svg>
+  </main>
+
+</body>
+</html>
