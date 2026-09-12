@@ -2,8 +2,7 @@
 
 A modern, high-performance personal portfolio website built with **React**, **Vite**, **Bootstrap**, and **Framer Motion**, featuring glassmorphism design, theme customization (Dark/Light mode), dynamic interactive project showcases, and direct resume access.
 
-🔗 **Live Demo (Vercel)**: [https://syed-umair-ahmed-portfolio.vercel.app](https://syed-umair-ahmed-portfolio.vercel.app) *(or your Vercel deployment URL)*
-
+🔗 **Live Demo (Vercel)**: https://syedumair05-portfolio.vercel.app/
 ---
 
 ## 🛠️ Tech Stack
